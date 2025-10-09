@@ -9,4 +9,9 @@ npm i react-icons react-redux @reduxjs/toolkit react-router react-router-dom rea
 /* 
 npm init -y
  npm i bcryptjs body-parser concurrently cookie-parser dotenv express jsonwebtoken mongoose multer nodemon
+"scripts": {
+    "fullstack":"concurrently \"npm run backend\" \"npm run frontend\"",
+    "frontend": "cd frontend && npm run dev",
+    "backend": "nodemon backend/index.js"
+  },
 */
