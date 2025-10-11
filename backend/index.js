@@ -12,7 +12,6 @@ import userRoutes from "./routes/userRoutes.js";
 dotenv.config();
 connectDB()
 
-
 const app = express();
 
 // Middleware
