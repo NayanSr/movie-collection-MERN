@@ -6,6 +6,7 @@ import path from "path";
 
 // Files
 import connectDB from "./config/db.js";
+import userRoutes from "./routes/userRoutes.js";
 
 // Configuration
 dotenv.config();
@@ -22,6 +23,12 @@ app.use(cookieParser());
 const PORT = process.env.PORT
 
 // Routes
+app.use("/api/v1/users", userRoutes)
 
+/* 
+app.get('/',(req,res)=>{
+    res.send("Server is connected")
+}) 
+    */
 
 app.listen(PORT,()=>console.log(`Listining from port ${PORT}`))
