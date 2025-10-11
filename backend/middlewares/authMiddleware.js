@@ -1,6 +1,7 @@
  import jwt from "jsonwebtoken";
- import User from "../models/User";
- import asyncHandler from "./asynchandler";
+import User from "../models/User.js";
+import asyncHandler from "./asyncHandler.js";
+
 
  // Check if the user is authenticated or not
 const authenticate= asyncHandler(async(req, res, next)=>{

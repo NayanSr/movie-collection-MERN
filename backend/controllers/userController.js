@@ -1,6 +1,6 @@
 import User from "../models/User.js";
 import bcrypt from "bcryptjs";
-import asyncHandler from "../middlewares/asynchandler.js";
+import asyncHandler from "../middlewares/asyncHandler.js";
 import generateToken from "../utils/createToken.js";
 
 const createUser = asyncHandler(async (req, res) => {
@@ -72,4 +72,10 @@ const logoutCurrentUser= asyncHandler(async(req,res)=>{
 
 })
 
-export { createUser, loginUser,logoutCurrentUser };
+ const getAllUsers= asyncHandler(async(req,res)=>{
+  const users= await User.find({});
+  res.json(users);
+
+})
+ 
+export { createUser, loginUser,logoutCurrentUser, getAllUsers };
