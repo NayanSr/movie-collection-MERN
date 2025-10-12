@@ -1,12 +1,16 @@
-
+import { Outlet } from "react-router-dom";
+import {ToastContainer} from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
   return (
-    <div>
-      <h1 className="text-2xl bg-red-500">App</h1>
-      <h2 className="text-green-500">App</h2>
-      <h4>App</h4>
-    </div>
+    <>
+    <ToastContainer/>
+    <h2 className="text-2xl">h2 from App</h2>
+    <main className="py-3">
+<Outlet/>
+    </main>
+    </>
   )
 }
 
