@@ -15,7 +15,7 @@ const Register = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const [register, { isLoding }] = useRegisterMutation();
+  const [register, { isLoding: isLoading }] = useRegisterMutation();
   const { userInfo } = useSelector((state) => state.auth);
   const { search } = useLocation();
   const sp = new URLSearchParams(search);
@@ -112,13 +112,13 @@ const Register = () => {
             />
           </div>
           <button
-            disabled={isLoding}
+            disabled={isLoading}
             type="submit"
             className="bg-teal-500 text-white px-4 py-2 rounded cursor-pointer my-[1rem] "
           >
-            {isLoding ? "Registering..." : "Register"}
+            {isLoading ? "Registering..." : "Register"}
           </button>
-          {isLoding && <Loader />}
+          {isLoading && <Loader />}
         </form>
         <div className="mt-4">
           <p className="text-white">
@@ -132,6 +132,7 @@ const Register = () => {
           </p>
         </div>
       </div>
+      {/* Set an Image */}
     </div>
   );
 };
