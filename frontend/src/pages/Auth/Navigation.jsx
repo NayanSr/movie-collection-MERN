@@ -7,7 +7,7 @@ import {
 import { MdOutlineLocalMovies } from "react-icons/md";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { useLoginMutation } from "../../redux/api/user";
+import { useLoginMutation } from "../../redux/api/users";
 import { logout } from "../../redux/features/auth/authSlice";
 
 const Navigation = () => {
