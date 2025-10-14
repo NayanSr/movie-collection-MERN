@@ -65,11 +65,11 @@ const Navigation = () => {
             )}
             {userInfo && (
               <h2
-                className={`h-4 w-4 ml-1 ${
-                  dropdownOpen ? "transform rotate-180" : ""
+                className={`text-2xl h-4 w-4 ml-1 ${
+                  dropdownOpen ? "transform rotate-180 mt-6 pr-8 " : ""
                 }`}
               >
-                SVG Dropdown
+                 🔻
               </h2>
             )}
           </button>
