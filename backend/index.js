@@ -7,6 +7,7 @@ import path from "path";
 // Files
 import connectDB from "./config/db.js";
 import userRoutes from "./routes/userRoutes.js";
+import genreRoutes from './routes/genreRoutes.js'
 
 // Configuration
 dotenv.config();
@@ -22,7 +23,8 @@ app.use(cookieParser());
 const PORT = process.env.PORT
 
 // Routes
-app.use("/api/v1/users", userRoutes)
+app.use("/api/v1/users", userRoutes);
+app.use('/api/v1/genre', genreRoutes)
 
 /* 
 app.get('/',(req,res)=>{
