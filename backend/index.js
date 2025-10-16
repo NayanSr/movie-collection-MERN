@@ -26,10 +26,6 @@ const PORT = process.env.PORT
 app.use("/api/v1/users", userRoutes);
 app.use('/api/v1/genre', genreRoutes)
 
-/* 
-app.get('/',(req,res)=>{
-    res.send("Server is connected")
-}) 
-    */
+
 
 app.listen(PORT,()=>console.log(`Listining from port ${PORT}`))
