@@ -11,12 +11,12 @@ import {toast} from "react-toastify";
 
 const GenreList = () => {
   
-  const { data: genres, refetch } = useFetchGenresQuery();
   const [name, setName] = useState(""); 
   const [selectedGenre, setSelectedGenre] = useState(null);
   const [updatingName, setUpdatingName] = useState("");
   const [modalVisible, setModalVisible] = useState(false);
-
+  
+  const { data: genres, refetch } = useFetchGenresQuery();
   const [createGenre] = useCreateGenreMutation();
   const [updateGenre] = useUpdateGenreMutation();
   const [deleteGenre] = useDeleteGenreMutation();

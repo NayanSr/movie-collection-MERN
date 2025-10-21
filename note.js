@@ -14,7 +14,12 @@ npm init -y
     "frontend": "cd frontend && npm run dev",
     "backend": "nodemon backend/index.js"
   },
-*/
+
+
+  creation of a collection (movies)
+    Create a Schema and Model. Them create Route in index.js(app.use('/api/v1/movies', moviesRoutes )). Inside this moviesRoutes impement CRUD operation. Create a new middleware(checjId.js) in middleware
+
+  */
 
 44:2:20
 44.20.30
