@@ -1,8 +1,15 @@
+import { Header } from "./Movies/Header";
+import MoviesContainerPage from "./Movies/MoviesContainerPage";
 
 const Home = () => {
   return (
-    <div>Home</div>
-  )
-}
+    <>
+      <Header />
+      <section className="mt-[10rem]">
+        <MoviesContainerPage />
+      </section>
+    </>
+  );
+};
 
-export default Home
+export default Home;
