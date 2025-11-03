@@ -21,6 +21,8 @@ import GenreList from "./pages/Admin/GenreList.jsx";
 import CreateMovie from "./pages/Admin/CreateMovie.jsx";
 import AdminMovieList from "./pages/Admin/AdminMovieList.jsx";
 import UpdateMovie from "./pages/Admin/UpdateMovie.jsx";
+import AllMovies from "./pages/Movies/AllMovies.jsx";
+import MovieDetails from "./pages/Movies/MovieDetails.jsx";
 // import { createRoutesFromElements} from "react-router"
 
 // Auth
@@ -31,6 +33,8 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route path="/" element={<Home />}></Route>
+      <Route path='/movies' element={<AllMovies/>} />
+           <Route path='/movies/:id' element={<MovieDetails/>}/>
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="" element={<PrivateRoute />}>
@@ -41,6 +45,7 @@ const router = createBrowserRouter(
         <Route path="/admin/movies-list" element={<AdminMovieList/>} /> 
         <Route path="/admin/movies/create" element={<CreateMovie/>} />
         <Route path="admin/movies/update/:id" element={<UpdateMovie/>}/>
+   
       </Route>
     </Route>
   )
